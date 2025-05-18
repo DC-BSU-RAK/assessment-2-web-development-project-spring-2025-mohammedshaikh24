@@ -1,0 +1,116 @@
+/* reset spacing and box model */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* body font and colors */
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fff;
+    background-color: #000;
+    overflow-x: hidden;
+  }
+  
+  /* header layout */
+  .ps-head {
+    background-color: rgba(10,10,10,0.85);
+    padding: 1rem 2rem;
+    border-bottom: 2px solid #0050ff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* logo styling */
+  .ps-logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  /* nav list layout */
+  .ps-nav {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  /* nav links */
+  .ps-nav a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+  }
+  
+  /* hover and active nav state */
+  .ps-nav a:hover,
+  .ps-nav a.active {
+    background-color: #0050ff;
+  }
+  
+  /* news section layout */
+  .ps-news {
+    padding: 2rem;
+    background-color: #121212;
+  }
+  
+  /* news heading */
+  .ps-news h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  /* news grid layout */
+  .ps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+  
+  /* individual news card */
+  .ps-card {
+    background-color: #1e1e1e;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(36, 105, 255, 0.3);
+    transition: transform 0.3s ease;
+  }
+  
+  /* hover zoom effect */
+  .ps-card:hover {
+    transform: scale(1.03);
+  }
+  
+  /* news image */
+  .ps-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+  }
+  
+  /* news text content */
+  .ps-info {
+    padding: 1rem;
+  }
+  
+  /* news title */
+  .ps-info h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* news paragraph */
+  .ps-info p {
+    font-size: 0.95rem;
+    color: #ccc;
+  }
+  

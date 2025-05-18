@@ -1,0 +1,166 @@
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* base styles */
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
+    position: relative;
+    color: #fff;
+    background-color: #000;
+  }
+  
+  /* header */
+  .ps-head {
+    z-index: 1;
+    background-color: rgba(10,10,10,0.85);
+    position: relative;
+    border-bottom: 2px solid #0050ff;
+    padding: 1rem 2rem;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+  }
+  
+  .ps-logo {
+    font-size: 1.8rem;
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  .ps-nav {
+    list-style: none;
+    gap: 1.5rem;
+    display: flex;
+  }
+  
+  .ps-nav a {
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    transition: background 0.3s ease;
+    color: #fff;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+  
+  .ps-nav a:hover,
+  .ps-nav a.active {
+    color: #fff;
+    background-color: #0050ff;
+  }
+  
+  /* hero section */
+  .ps-hero {
+    z-index: 1;
+    background: linear-gradient(to bottom, #111, #1c1c1c);
+    padding: 4rem 2rem;
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+  }
+  
+  .ps-bg {
+    top: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+    width: 100%;
+    left: 0;
+    z-index: 0;
+    opacity: 0;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0, 80, 255, 0.3);
+  }
+  
+  .ps-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .ps-hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #ccc;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .ps-btn {
+    padding: 0.75rem 1.5rem;
+    background-color: #0050ff;
+    font-weight: bold;
+    z-index: 1;
+    position: relative;
+    border-radius: 5px;
+    color: #fff;
+    display: inline-block;
+    text-decoration: none;
+    transition: background 0.3s ease;
+  }
+  
+  .ps-btn:hover {
+    background-color: #003bbd;
+  }
+  
+  /* content section */
+  .ps-sec {
+    padding: 2rem;
+    background-color: #121212;
+  }
+  
+  .ps-sec h2 {
+    margin-bottom: 2rem;
+    text-align: center;
+    color: #fff;
+    font-size: 2rem;
+  }
+  
+  .ps-deck {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  
+  .ps-card {
+    background-color: #1e1e1e;
+    width: 250px;
+    border-radius: 30px;
+    opacity: 1;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(36,105,255,0.425);
+  }
+  
+  .ps-card:hover {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  
+  .ps-card img {
+    height: 280px;
+    width: 100%;
+    object-fit: cover;
+    opacity: 1;
+    border-radius: 8px;
+    display: block;
+  }
+  
+  .ps-card h3 {
+    color: #fff;
+    padding: 1rem;
+  }
+  

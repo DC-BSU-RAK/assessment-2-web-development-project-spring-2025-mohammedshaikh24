@@ -1,11 +1,79 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>PlayStation Exclusives</title> 
+  <link rel="stylesheet" href="home.css"> 
 </head>
 <body>
-    
+
+<header class="ps-head">
+  <div class="ps-logo">PlayStation Exclusives</div> 
+  <nav>
+    <ul class="ps-nav">
+      <li><a href="index.html">Home</a></li> <!-- directs to home page -->
+      <li><a href="games.html">Games</a></li> <!-- directs to games page -->
+      <li><a href="news.html">News</a></li> <!-- directs to news page -->
+      <li><a href="media.html">Media</a></li> <!-- directs to media page -->
+      <li><a href="contact.html">Contact</a></li> <!-- directs to contact page -->
+      <li><a target="_blank" href="https://www.playstation.com/">Official Site</a></li> <!-- external link to official site -->
+    </ul>
+  </nav>
+</header>
+
+<section class="ps-hero">
+  <div class="ps-bg"></div> <!-- overlay for hover background effect -->
+  <h1>Welcome to PlayStation Exclusives</h1> 
+  <p>We present you the PlayStation Exclusives</p> 
+  <a class="ps-btn" href="games.html">View Exclusives</a> <!-- button linking to games page -->
+</section>
+
+<section class="ps-sec">
+  <h2>Featured Games</h2> 
+  <div class="ps-deck">
+    <div class="ps-card">
+      <img src="images/gow.png" alt="God of War"> <!-- game image -->
+      <h3>God of War</h3>
+    </div>
+    <div class="ps-card">
+      <img src="images/spiderman.png" alt="Spider-Man"> <!-- game image -->
+      <h3>Marvel's Spider-Man</h3>
+    </div>
+    <div class="ps-card">
+      <img src="images/the last of us.jpg" alt="The Last of Us"> <!-- game image -->
+      <h3>The Last of Us Remastered</h3>
+    </div>
+  </div>
+</section>
+
+<script>
+const hero = document.querySelector('.ps-hero');
+const overlay = document.querySelector('.ps-bg');
+const imgs = [
+  'images/gowhover.jpg', 
+  'images/hoverspiderman.jpg',
+  'images/lasthover.jpg'
+];
+let i = -1;
+
+hero.addEventListener('mousemove', (e) => {
+  let w = hero.offsetWidth, x = e.offsetX;
+  let idx = Math.floor((x / w) * imgs.length);
+  if (idx !== i) {
+    i = idx;
+    overlay.style.opacity = '0'; // fade out overlay before changing image
+    setTimeout(() => {
+      overlay.style.backgroundImage = `url(${imgs[idx]})`; // change background image
+      overlay.style.opacity = '1'; // fade in overlay
+    }, 150);
+  }
+});
+
+hero.addEventListener('mouseleave', () => {
+  overlay.style.opacity = '0'; // hide overlay on mouse leave
+});
+</script>
+
 </body>
 </html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PlayStation Media</title>
+  <link rel="stylesheet" href="media.css"/>
+</head>
+<body>
+
+  <!-- header section with logo and navigation -->
+  <header class="ps-head">
+    <div class="ps-logo">PlayStation Media</div>
+    <div class="ps-menu">
+      <ul class="ps-menu-list">
+        <li><a href="index.html">home</a></li>
+        <li><a href="games.html">games</a></li>
+        <li><a href="news.html">news</a></li>
+        <li><a href="media.html" class="active">media</a></li>
+        <li><a href="contact.html">contact</a></li>
+        <li><a href="https://www.playstation.com/" target="_blank">official site</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- media section with embedded videos -->
+  <section class="ps-media-wrapper">
+    <h2 class="ps-media-title">game media highlights</h2>
+    <div class="ps-media-layout">
+
+      <!-- god of war video -->
+      <div class="ps-media-card">
+        <video controls poster="images/gow.png">
+          <source src="videos/gowvideo.mp4" type="video/mp4">
+        </video>
+        <div class="ps-media-info">
+          <h3>god of war ragnarok trailer</h3>
+        </div>
+      </div>
+
+      <!-- spider-man 2 video -->
+      <div class="ps-media-card">
+        <video controls poster="images/sm2.jpg">
+          <source src="videos/mss2.mp4" type="video/mp4">
+        </video>
+        <div class="ps-media-info">
+          <h3>spider-man 2 showcase</h3>
+        </div>
+      </div>
+
+      <!-- the last of us trailer -->
+      <div class="ps-media-card">
+        <video controls poster="images/lat.jpg">
+          <source src="videos/tlot.mp4" type="video/mp4">
+        </video>
+        <div class="ps-media-info">
+          <h3>the last of us hbo trailer</h3>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</body>
+</html>
