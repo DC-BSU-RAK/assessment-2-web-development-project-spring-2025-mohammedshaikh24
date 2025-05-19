@@ -1,109 +1,110 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #ffffff;
-    background-color: #000000;
-    position: relative;
-    overflow-x: hidden;
-  }
-  
-  .ps-head {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgba(10, 10, 10, 0.85);
-    padding: 1rem 2rem;
-    border-bottom: 2px solid #0050ff;
-    position: relative;
-    z-index: 1;
-  }
-  
-  .ps-logo {
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: #ffffff;
+.ps-media-info h3 {
+    font-size: 1.1rem;
   }
   
   .ps-menu {
     display: flex;
   }
   
-  .ps-menu-list {
-    list-style: none;
-    display: flex;
-    gap: 1.5rem;
+  .ps-media-wrapper {
+    z-index: 1;
+    backdrop-filter: blur(6px);
+    padding: 3rem 2rem;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.3);
   }
   
-  .ps-menu-list li a {
-    text-decoration: none;
-    color: #ffffff;
-    font-weight: 500;
-    text-transform: uppercase;
-    font-size: 0.9rem;
-    letter-spacing: 1px;
-    padding: 0.5rem 1rem;
-    transition: background 0.3s ease;
+  .ps-media-layout {
+    gap: 2rem;
+    padding-right: 0.5rem;
+    max-height: 80vh;
+    overflow-y: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   }
   
   .ps-menu-list li a:hover,
   .ps-menu-list li a.active {
-    background-color: #0050ff;
     border-radius: 5px;
-  }
-  
-  .ps-media-wrapper {
-    padding: 3rem 2rem;
-    backdrop-filter: blur(6px);
-    background-color: rgba(0, 0, 0, 0.3);
-    z-index: 1;
-    position: relative;
-  }
-  
-  .ps-media-title {
-    text-align: center;
-    font-size: 2.2rem;
-    margin-bottom: 2rem;
-  }
-  
-  .ps-media-layout {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 2rem;
-    max-height: 80vh;
-    overflow-y: auto;
-    padding-right: 0.5rem;
-  }
-  
-  .ps-media-card {
-    background-color: rgba(255, 255, 255, 0.05);
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 0 10px rgba(0, 80, 255, 0.3);
-    transition: transform 0.3s ease, background-color 0.3s ease;
-  }
-  
-  .ps-media-card:hover {
-    transform: translateY(-5px);
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: #0050ff;
   }
   
   .ps-media-card video {
-    width: 100%;
     height: 250px;
     object-fit: cover;
+    width: 100%;
+  }
+  
+  .ps-head {
+    border-bottom: 2px solid #0050ff;
+    position: relative;
+    background-color: rgba(10, 10, 10, 0.85);
+    z-index: 1;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .ps-menu-list li a {
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 0.9rem;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    letter-spacing: 1px;
+    transition: background 0.3s ease;
+  }
+  
+  .ps-media-card {
+    border-radius: 15px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.05);
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 80, 255, 0.3);
+  }
+  
+  .ps-logo {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 1.8rem;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
+    color: #ffffff;
+    background-color: #000000;
+    position: relative;
   }
   
   .ps-media-info {
+    text-align: center;
     padding: 1rem;
+  }
+  
+  .ps-menu-list {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+  }
+  
+  .ps-media-title {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
     text-align: center;
   }
   
-  .ps-media-info h3 {
-    font-size: 1.1rem;
+  .ps-media-card:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-5px);
+  }
+  
+  /* reset default styles and set box sizing */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
   

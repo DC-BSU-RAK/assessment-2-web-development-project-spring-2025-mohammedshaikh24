@@ -1,55 +1,95 @@
-/* reset */
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* contact section */
+  .ps-contact-wrapper {
+    background-color: rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 1;
+    backdrop-filter: blur(6px);
+    margin: auto;
+    max-width: 600px;
+    padding: 3rem 2rem;
+  }
+  
+  .ps-contact-form textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+  
+  .ps-contact-form button {
+    padding: 0.8rem;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    transition: background-color 0.3s ease;
+    background-color: #0050ff;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  .ps-contact-form {
+    gap: 1.2rem;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .ps-contact-form input,
+  .ps-contact-form textarea {
+    padding: 0.8rem;
+    font-size: 1rem;
+    background-color: #1a1a1a;
+    border: none;
+    border-radius: 8px;
+    color: #ffffff;
+  }
+  
+  .ps-contact-form label {
+    font-weight: bold;
+  }
+  
+  .ps-contact-form button:hover {
+    background-color: #003fcc;
+  }
+  
+  .ps-contact-title {
+    font-size: 2.2rem;
+    text-align: center;
+    margin-bottom: 2rem;
   }
   
   /* base styles */
   body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
     color: #ffffff;
     background-color: #000000;
     position: relative;
-    overflow-x: hidden;
   }
   
   /* header */
   .ps-head {
-    display: flex;
-    justify-content: space-between;
+    position: relative;
+    border-bottom: 2px solid #0050ff;
     align-items: center;
     background-color: rgba(10, 10, 10, 0.85);
+    display: flex;
+    justify-content: space-between;
     padding: 1rem 2rem;
-    border-bottom: 2px solid #0050ff;
-    position: relative;
     z-index: 1;
   }
   
-  .ps-logo {
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: #ffffff;
-  }
-  
-  .ps-menu {
-    display: flex;
-  }
-  
-  .ps-menu-list {
-    list-style: none;
-    display: flex;
-    gap: 1.5rem;
-  }
-  
   .ps-menu-list li a {
-    text-decoration: none;
     color: #ffffff;
-    font-weight: 500;
     text-transform: uppercase;
+    font-weight: 500;
     font-size: 0.9rem;
-    letter-spacing: 1px;
     padding: 0.5rem 1rem;
+    text-decoration: none;
+    letter-spacing: 1px;
     transition: background 0.3s ease;
   }
   
@@ -59,60 +99,19 @@
     border-radius: 5px;
   }
   
-  /* contact section */
-  .ps-contact-wrapper {
-    padding: 3rem 2rem;
-    backdrop-filter: blur(6px);
-    background-color: rgba(0, 0, 0, 0.3);
-    z-index: 1;
-    position: relative;
-    max-width: 600px;
-    margin: auto;
-  }
-  
-  .ps-contact-title {
-    text-align: center;
-    font-size: 2.2rem;
-    margin-bottom: 2rem;
-  }
-  
-  .ps-contact-form {
+  .ps-menu {
     display: flex;
-    flex-direction: column;
-    gap: 1.2rem;
   }
   
-  .ps-contact-form label {
+  .ps-menu-list {
+    list-style: none;
+    gap: 1.5rem;
+    display: flex;
+  }
+  
+  .ps-logo {
     font-weight: bold;
-  }
-  
-  .ps-contact-form input,
-  .ps-contact-form textarea {
-    padding: 0.8rem;
-    border: none;
-    border-radius: 8px;
-    background-color: #1a1a1a;
+    font-size: 1.8rem;
     color: #ffffff;
-    font-size: 1rem;
-  }
-  
-  .ps-contact-form textarea {
-    min-height: 120px;
-    resize: vertical;
-  }
-  
-  .ps-contact-form button {
-    background-color: #0050ff;
-    color: white;
-    border: none;
-    padding: 0.8rem;
-    border-radius: 8px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .ps-contact-form button:hover {
-    background-color: #003fcc;
   }
   
